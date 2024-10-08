@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('Roboto-Regular.ttf');
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Regular.ttf');
+}
+
+html {
+  /* font-size: 15px; */
+  font-family: 'Roboto', sans-serif;
+  height: 100dvh;
+
+}
+
+* {
+  background: black;
+  color: white;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 20px;
+  color: purple;
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  order: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+  top: 0;
+  background: rgb(182, 182, 182);
+  flex: 1 ;
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+main {
+  order: 2;
+  flex: 8 ;
+  font-size: 20px;
+  background: rgb(214, 95, 95);
+}
+
+footer {
+  background: yellowgreen;
+  flex: 1 ;
+  order: 0;
+  padding: 10px;
+  text-align: center;
+
+  p {
+    color: white;
+  }
+
+}
+
+#proyectos {
+  background: rgb(214, 95, 95);
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.contenedor {
+  width: 100%;
+  border: 10px solid yellow;
+  padding: 10px;
+  margin: 10px;
+}
+
+a[href="#"] {
+  color: salmon;
+  padding: 3px;
+  margin: 5px;
+}
+
+input[type="submit"] {
+  background: rgb(214, 95, 95);
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: white;
+  color: black;
+}
+
+
+/* .relativo {
+
+  position: relative;
+
+  top: 30px;
+
+  left: 5px;
+
+} */
+
+/* .absoluto {
+
+  position: absolute;
+
+  top: 50px;
+
+  left: 100px;
+
+} */
+
+.fijo {
+
+  position: fixed;
+
+  bottom: 0;
+
+  right: 0;
+
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header {
+    background: yellow;
+    order: 2
+  }
+
+  main {
+    order: 1;
+    background: red;
+    
+
+  }
+
+  footer {
+    order: 3;
+    background: purple;
+  }
+}

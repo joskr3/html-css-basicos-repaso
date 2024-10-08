@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Mi Página de Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+  <style>
+    p {
+      color: green;
+    }
+    </style>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+
+<body>
+
+  <header class="contenedor relativo">
+
+    <h1 style="color: blue;">Bienvenido a Mi Sitio Web</h1>
+
+      <nav>
+      
+        <ul>
+      
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+      
+          <li><a href="#proyectos">Proyectos</a></li>
+      
+          <li><a href="#contacto">Contacto</a></li>
+      
+        </ul>
+      
+      </nav>
+
+  </header>
+
+  <main class="contenedor">
+
+    <section id="sobre-mi">
+
+      <h2>Sobre Mí</h2>
+
+      <p>Hola, soy un desarrollador web apasionado por crear soluciones innovadoras.</p>
+
+    </section>
+
+    <section class="absoluto" >
+
+      <h2 id="proyectos">Proyectos</h2>
+
+      <ul>
+
+        <li>Proyecto 1: <a href="#">Enlace al proyecto</a></li>
+
+        <li>Proyecto 2: <a href="#">Enlace al proyecto</a></li>
+
+        <li>Proyecto 3: <a href="#">Enlace al proyecto</a></li>
+
+      </ul>
+
+    </section>
+
+    <section id="contacto">
+
+      <h2>Contacto</h2>
+
+      <form action="/enviar-mensaje" method="post">
+
+        <label for="nombre">Nombre:</label>
+
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="mensaje">Mensaje:</label>
+
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <input type="submit" value="Enviar Mensaje">
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer class="contenedor">
+
+    <p class="fijo">© 2024 Mi Sitio Web</p>
+
+  </footer>
+
+</body>
+
+</html>
