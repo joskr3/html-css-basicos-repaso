@@ -14,13 +14,17 @@ html {
 body {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 10px;
+  grid-template-columns: minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 300px) minmax(auto, 1fr);
+  grid-template-rows: minmax(50px, 100px) 1fr minmax(10px, 10dvw);
+  gap: 2rem;
+  grid-template-areas:
+    "header header header header "
+    ". main main ."
+    "footer footer footer footer";
 }
 
 header {
-  grid-column: 1 / 13;
+  grid-area: header;
   background: blue;
   color: white;
   text-align: center;
@@ -31,8 +35,7 @@ header {
 main {
   background: red;
   border: 10px solid yellow;
-  grid-column: 5 / 10;
-  grid-row: 2 / 10;
+  grid-area: main;
   display: flex;
   gap: 10px;
   display: flex;
@@ -61,6 +64,5 @@ main {
 footer {
   background: green;
   border: 10px solid yellow;
-  grid-column: 1 / 13;
-  grid-row: 11 / 13;
+  grid-area: footer;
 }
