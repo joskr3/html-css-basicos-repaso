@@ -33,7 +33,6 @@ body {
 
 label {
   font-family: 'Roboto', sans-serif;
-
   font-size: 20px;
   color: purple;
 }
@@ -46,12 +45,13 @@ a {
 header {
   position: sticky;
   display: flex;
+  flex-direction: column;
   order: 1;
   flex-wrap: wrap;
   gap: 1rem;
   top: 0;
   background: rgb(182, 182, 182);
-  flex: 1 ;
+  flex: 1;
 
   h1 {
     font-size: 2rem;
@@ -60,14 +60,14 @@ header {
 
 main {
   order: 2;
-  flex: 8 ;
+  flex: 8;
   font-size: 20px;
   background: rgb(214, 95, 95);
 }
 
 footer {
   background: yellowgreen;
-  flex: 1 ;
+  flex: 1;
   order: 0;
   padding: 10px;
   text-align: center;
@@ -85,7 +85,13 @@ footer {
 }
 
 .contenedor {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-basis: 100%;
+  /* width: 100%; */
   border: 10px solid yellow;
   padding: 10px;
   margin: 10px;
@@ -129,13 +135,19 @@ input[type="submit"]:hover {
 } */
 
 .fijo {
-
   position: fixed;
-
   bottom: 0;
-
   right: 0;
+}
 
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-basis: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -145,15 +157,30 @@ input[type="submit"]:hover {
   }
 
   header {
+    display: flex;
+    flex-direction: column;
     background: yellow;
-    order: 2
+    order: 2;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      flex-basis: 100%;
+      ul {
+        align-self: self-end;
+      }
+
+    }
   }
+
 
   main {
     order: 1;
     background: red;
-    
-
   }
 
   footer {
