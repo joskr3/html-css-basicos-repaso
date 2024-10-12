@@ -1,0 +1,153 @@
+/* INICIO - estilos para pantalla pequeña(por defecto) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  max-width: 100%;
+}
+
+html {
+  height: 100dvh;
+}
+
+body {
+  background-color: lightblue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  nav {
+    svg{
+      width: 100%;
+      display: block;
+    }
+    ul {
+      display: none;
+      justify-content: space-between;
+      margin: 1rem;
+
+      li {
+        list-style: none;
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  aside {
+    background-color: yellow;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+  section {
+    background-color: orange;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem;
+      display: none;
+    }
+}
+
+footer {
+  background: lightcoral;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10dvh;
+}
+
+/* FIN - estilos para pantalla pequeña(por defecto) */ 
+
+/* 
+---------------------------------------------------------------- */
+
+
+/* INICIO - estilos para pantalla grande(768px) */
+@media (width>=768px) {
+  body{
+    background: lightgreen;
+    color: black;
+  }
+  header{
+    background: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      svg{
+        display: none;
+      }
+      ul {
+        display: flex;
+      }
+    }
+  }
+
+  main {
+    flex-direction: row;
+    img{
+      display: block;
+    }
+  }
+}
+
+/* FIN - estilos para pantalla grande(768px) */
